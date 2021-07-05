@@ -1,7 +1,7 @@
 package com.kvark900.imageprocessing.util;
 
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 public class ElapsedTimeLogger<T> {
     private final Runnable runnable;
@@ -21,6 +21,6 @@ public class ElapsedTimeLogger<T> {
         runnable.run();
         long end = System.currentTimeMillis();
         long duration = end - start;
-        log.info(String.format("%s has finished after %dms", operationName, duration));
+        log.info(String.format("'%s' has finished after %dms", operationName, duration));
     }
 }
